@@ -28,11 +28,12 @@ public class Graph {
     /**
      * Breadth First Search
      */
-    void breadthFirstSearch(){
+    void breadthFirstSearch() {
         if (nodes.length > 0) {
             bfs(nodes[0]);
         }
     }
+
     private void bfs(GraphNode node) {
         Queue q = new Queue();
         q.enqueue(node);
@@ -43,8 +44,8 @@ public class Graph {
             n.visited = true;
 
             for (GraphNode graphNode : n.neighbors) {
-                if (!n.visited) {
-                    visit(n);
+                if (!graphNode.visited) {
+                    q.enqueue(graphNode);
                 }
             }
         }
