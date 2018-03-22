@@ -29,7 +29,7 @@ public class Graph {
      * Breadth First Search
      */
     void breadthFirstSearch() {
-        if (nodes.length > 0) {
+        if (nodes != null && nodes.length > 0) {
             bfs(nodes[0]);
         }
     }
