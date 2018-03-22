@@ -4,10 +4,10 @@ package com.rolandoasmat;
  * First in First out Data Structure (FIFO)
  */
 public class Queue {
-    GraphNode head;
-    GraphNode tail;
+    Node head;
+    Node tail;
 
-    void enqueue(GraphNode node) {
+    void enqueue(Node node) {
         if (tail != null) {
             tail.next = node;
             tail = node;
@@ -17,9 +17,9 @@ public class Queue {
         }
     }
 
-    GraphNode dequeue() {
+    Node dequeue() {
         if (head != null) {
-            GraphNode result = head;
+            Node result = head;
             head = head.next;
             return result;
         } else {
@@ -32,8 +32,5 @@ public class Queue {
     }
 }
 
-class QueueNode {
-    int data;
-    GraphNode next;
-}
+
 

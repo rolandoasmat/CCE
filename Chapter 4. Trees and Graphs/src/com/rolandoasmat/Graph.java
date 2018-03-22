@@ -1,7 +1,7 @@
 package com.rolandoasmat;
 
 public class Graph {
-    GraphNode[] nodes;
+    Node[] nodes;
 
     /**
      * Depth First Search
@@ -12,13 +12,13 @@ public class Graph {
         }
     }
 
-    private void dfs(GraphNode node) {
+    private void dfs(Node node) {
         if (node == null) {
             return;
         }
         visit(node);
         node.visited = true;
-        for (GraphNode n : node.neighbors) {
+        for (Node n : node.neighbors) {
             if (!n.visited) {
                 dfs(n);
             }
@@ -34,18 +34,18 @@ public class Graph {
         }
     }
 
-    private void bfs(GraphNode node) {
+    private void bfs(Node node) {
         Queue q = new Queue();
         q.enqueue(node);
 
         while (!q.isEmpty()) {
-            GraphNode n = q.dequeue();
+            Node n = q.dequeue();
             visit(n);
             n.visited = true;
 
-            for (GraphNode graphNode : n.neighbors) {
-                if (!graphNode.visited) {
-                    q.enqueue(graphNode);
+            for (Node Node : n.neighbors) {
+                if (!Node.visited) {
+                    q.enqueue(Node);
                 }
             }
         }
@@ -60,14 +60,7 @@ public class Graph {
      * Helpers
      */
 
-    private void visit(GraphNode node) {
+    private void visit(Node node) {
         System.out.println(node.data);
     }
-
-}
-
-class GraphNode extends QueueNode {
-    int data;
-    boolean visited;
-    GraphNode[] neighbors;
 }

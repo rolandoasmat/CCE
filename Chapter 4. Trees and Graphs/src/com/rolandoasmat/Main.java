@@ -3,6 +3,7 @@ package com.rolandoasmat;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Graph graph = new Graph();
+        GraphNode a = new GraphNode(34);
     }
 }
