@@ -28,11 +28,6 @@ public class Main {
         System.out.println("Breadth First Search");
         graph.breadthFirstSearch();
 
-        // Reset visited
-        for(Node node : graph.nodes) {
-            node.visited = false;
-        }
-
         System.out.println("Depth First Search");
         graph.depthFirstSearch();
     }

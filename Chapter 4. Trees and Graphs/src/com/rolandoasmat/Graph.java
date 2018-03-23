@@ -10,6 +10,7 @@ public class Graph {
         if (nodes.length > 0) {
             dfs(nodes[0]);
         }
+        resetVisited();
     }
 
     private void dfs(Node node) {
@@ -32,6 +33,7 @@ public class Graph {
         if (nodes != null && nodes.length > 0) {
             bfs(nodes[0]);
         }
+        resetVisited();
     }
 
     private void bfs(Node node) {
@@ -61,5 +63,11 @@ public class Graph {
 
     private void visit(Node node) {
         System.out.println(node.data);
+    }
+
+    private void resetVisited() {
+        for(Node node : this.nodes) {
+            node.visited = false;
+        }
     }
 }
