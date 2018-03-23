@@ -8,11 +8,11 @@ public class Queue {
     Node tail;
 
     void enqueue(Node node) {
-        if (tail != null) {
-            tail.next = node;
+        if (head == null && tail == null) {
+            head = node;
             tail = node;
         } else {
-            head = node;
+            tail.next = node;
             tail = node;
         }
     }
@@ -20,7 +20,13 @@ public class Queue {
     Node dequeue() {
         if (head != null) {
             Node result = head;
-            head = head.next;
+            if(head == tail) {
+                tail = null;
+                head = null;
+            } else {
+                head = head.next;
+            }
+
             return result;
         } else {
             return null;
@@ -31,6 +37,3 @@ public class Queue {
         return head == null;
     }
 }
-
-
-

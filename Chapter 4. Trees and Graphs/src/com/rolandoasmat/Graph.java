@@ -42,10 +42,9 @@ public class Graph {
             Node n = q.dequeue();
             visit(n);
             n.visited = true;
-
-            for (Node Node : n.neighbors) {
-                if (!Node.visited) {
-                    q.enqueue(Node);
+            for (Node neighbor : n.neighbors) {
+                if (!neighbor.visited) {
+                    q.enqueue(neighbor);
                 }
             }
         }

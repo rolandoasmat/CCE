@@ -5,12 +5,12 @@ package com.rolandoasmat;
  */
 
 class Node {
-    int data;
+    String data;
     boolean visited;
     Node[] neighbors;
     Node next;
 
-    Node(int data) {
+    Node(String data) {
         this.data = data;
     }
 }
