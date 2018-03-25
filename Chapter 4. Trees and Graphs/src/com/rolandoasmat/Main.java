@@ -37,15 +37,33 @@ public class Main {
     }
 
     public static void runTree() {
-        Tree.Node one = new Tree.Node(1);
-        Tree.Node two = new Tree.Node(2);
-        Tree.Node three = new Tree.Node(3);
-        Tree.Node four = new Tree.Node(4);
-        Tree.Node five = new Tree.Node(5);
-        Tree.Node six = new Tree.Node(6);
-        Tree.Node seven = new Tree.Node(7);
-        Tree.Node eight = new Tree.Node(8);
-        Tree.Node nine = new Tree.Node(9);
+        BinaryTree tree = createDummyTree();
+        BinaryTree.Node one = new BinaryTree.Node(1);
+        BinaryTree.Node nodeToFind = one;
+        int level = tree.findLevelOfNode(nodeToFind);
+        System.out.println("Level of Node: "+ nodeToFind.data+" is " +level);
+
+
+        tree = createDummyTree();
+        int column = 3;
+        int verticalSum = tree.verticalSum(column);
+        print("The vertical sum at column "+ column + " is: "+verticalSum);
+    }
+
+    static <T> void print(T t) {
+        System.out.println(t);
+    }
+
+    static BinaryTree createDummyTree() {
+        BinaryTree.Node one = new BinaryTree.Node(1);
+        BinaryTree.Node two = new BinaryTree.Node(2);
+        BinaryTree.Node three = new BinaryTree.Node(3);
+        BinaryTree.Node four = new BinaryTree.Node(4);
+        BinaryTree.Node five = new BinaryTree.Node(5);
+        BinaryTree.Node six = new BinaryTree.Node(6);
+        BinaryTree.Node seven = new BinaryTree.Node(7);
+        BinaryTree.Node eight = new BinaryTree.Node(8);
+        BinaryTree.Node nine = new BinaryTree.Node(9);
 
         one.left = two;
         one.right = three;
@@ -56,10 +74,8 @@ public class Main {
         four.left = eight;
         four.right = nine;
 
-        Tree tree = new Tree(one);
-        Tree.Node nodeToFind = one;
-        int level = tree.findLevelOfNode(nodeToFind);
-        System.out.println("Level of Node: "+ nodeToFind.data+" is " +level);
+        BinaryTree tree = new BinaryTree(one);
+        return tree;
 
     }
 }
