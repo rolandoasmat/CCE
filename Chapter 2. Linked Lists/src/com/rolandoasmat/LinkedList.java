@@ -15,4 +15,16 @@ public class LinkedList {
     LinkedList(Node root) {
         this.root = root;
     }
+
+    @Override
+    public String toString() {
+        Node t = root;
+        StringBuilder builder = new StringBuilder();
+        while(t != null) {
+            builder.append(t.data);
+            builder.append(" => ");
+            t = t.next;
+        }
+        return builder.toString();
+    }
 }
