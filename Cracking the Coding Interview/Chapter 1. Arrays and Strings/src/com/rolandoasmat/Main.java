@@ -5,15 +5,9 @@ public class Main {
     public static void main(String[] args) {
 	    String s = "bbbbb";
 	    int longestLength = longestLengthOfSubstringWithouthRepeatingCharacters(s);
-        print("Longest length of "+s+" is: "+longestLength);
 
         s = "abcba";
         String palin = longestPalindrome(s);
-        print("Longest palindrome of "+s+" is: "+palin);
-    }
-
-    public static <T> void print(T t) {
-        System.out.println(t);
     }
 
     /**
@@ -56,31 +50,7 @@ public class Main {
         return Math.max(count, maxCount);
     }
 
-    /**
-     * Rotates the matrix in-place 90 degrees clockwise
-     * @param matrix
-     */
-    static void rotate(int[][]matrix) {
-        if(matrix == null || matrix.length == 0 || matrix.length != matrix[0].length) {
-            return;
-        }
-        int N = matrix.length;
-        for(int level = 0; level < N / 2; level++) {
-            int levelOffset = N - level - 1;
-            for(int i = level; i < N - level - 1; i++) {
-                int iOffset = N - i - 1;
-                int tmp = matrix[i][levelOffset];
-                // Top -> right
-                matrix[i][levelOffset] = matrix[level][i];
-                // Left -> top
-                matrix[level][i] = matrix[iOffset][level];
-                // Bottom -> left
-                matrix[iOffset][level] = matrix[levelOffset][iOffset];
-                //Right -> bottom
-                matrix[levelOffset][iOffset] = tmp;
-            }
-        }
-    }
+
 
     static String longestPalindrome(String s) {
         int n = s.length();

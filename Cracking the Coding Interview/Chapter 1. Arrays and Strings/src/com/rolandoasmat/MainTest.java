@@ -6,26 +6,24 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void longestLengthOfSubstringWithouthRepeatingCharacters() {
-    }
+        String s = "bbbbbbb";
+        int expected = 1;
+        int actual = Main.longestLengthOfSubstringWithouthRepeatingCharacters(s);
+        assertEquals(expected, actual);
 
-    @org.junit.jupiter.api.Test
-    void rotate() {
-        int[][] input = {
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12},
-                {13, 14, 15, 16}};
+        s = "abcde";
+        expected = 4;
+        actual = Main.longestLengthOfSubstringWithouthRepeatingCharacters(s);
+        assertEquals(expected, actual);
 
-        int[][] expected = {
-                {13, 9, 5, 1},
-                {14, 10, 6, 2},
-                {15, 11, 7, 3},
-                {16, 12, 8, 4}};
-        Main.rotate(input);
-        for(int i = 0; i < input.length; i++) {
-            for(int j = 0; j < input.length; j++) {
-                assertEquals(input[i][j], expected[i][j]);
-            }
-        }
+        s = "abcabc";
+        expected = 3;
+        actual = Main.longestLengthOfSubstringWithouthRepeatingCharacters(s);
+        assertEquals(expected, actual);
+
+        s = "aaabbbccc";
+        expected = 2;
+        actual = Main.longestLengthOfSubstringWithouthRepeatingCharacters(s);
+        assertEquals(expected, actual);
     }
 }
