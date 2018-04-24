@@ -2,13 +2,7 @@ package com.rolandoasmat;
 
 public class Main {
 
-    public static void main(String[] args) {
-	    String s = "bbbbb";
-	    int longestLength = longestLengthOfSubstringWithouthRepeatingCharacters(s);
-
-        s = "abcba";
-        String palin = longestPalindrome(s);
-    }
+    public static void main(String[] args) { }
 
     /**
      * Find the length of the longest substring without a repeating character
@@ -51,7 +45,11 @@ public class Main {
     }
 
 
-
+    /**
+     * Find the longest substring of S that is also a palindrome.
+     * @param s
+     * @return substring
+     */
     static String longestPalindrome(String s) {
         int n = s.length();
         boolean[][] matrix = new boolean[n][n];
@@ -88,6 +86,5 @@ public class Main {
             }
         }
         return s.substring(maxI, maxJ+1);
-
     }
 }

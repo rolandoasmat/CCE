@@ -26,4 +26,12 @@ class MainTest {
         actual = Main.longestLengthOfSubstringWithouthRepeatingCharacters(s);
         assertEquals(expected, actual);
     }
+
+    @org.junit.jupiter.api.Test
+    void longestPalindrome() {
+        String s = "abccba";
+        String expected = "abccba";
+        String actual = Main.longestPalindrome(s);
+        assertEquals(expected, actual);
+    }
 }
