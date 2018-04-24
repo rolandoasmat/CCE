@@ -17,6 +17,18 @@ public class BinaryTree {
         this.root = root;
     }
 
+    int sumOfLeafNodes() {
+        return sumOfLeafNodes(this.root);
+    }
+
+    int sumOfLeafNodes(Node node) {
+        if(node.left == null && node.right == null) {
+            return node.data;
+        } else {
+            return sumOfLeafNodes(node.left) + sumOfLeafNodes(node.right);
+        }
+    }
+
 
     /**
      * Determine the level of specified Node

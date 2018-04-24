@@ -1,9 +1,29 @@
 package com.rolandoasmat;
 
+import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
         runTree();
+    }
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> result = new ArrayList<>();
+
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            List<Integer> currentLevel = new ArrayList<>();
+            while(!queue.isEmpty()) {
+
+            }
+            result.add(currentLevel);
+        }
+        return result;
     }
 
     public static void runGraph() {
@@ -48,12 +68,23 @@ public class Main {
         int column = 3;
         int verticalSum = tree.verticalSum(column);
         print("The vertical sum at column "+ column + " is: "+verticalSum);
+
+        tree = createDummyTree();
+        int leafSum = tree.sumOfLeafNodes();
+        print("Sum of leave nodes is " + leafSum);
     }
 
     static <T> void print(T t) {
         System.out.println(t);
     }
 
+    /**
+     *                     1
+     *                2        3
+     *              4   5    6   7
+     *             8 9
+     * @return
+     */
     static BinaryTree createDummyTree() {
         BinaryTree.Node one = new BinaryTree.Node(1);
         BinaryTree.Node two = new BinaryTree.Node(2);
