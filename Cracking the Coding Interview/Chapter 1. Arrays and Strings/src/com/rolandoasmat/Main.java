@@ -5,12 +5,9 @@ public class Main {
     public static void main(String[] args) { }
 
     /**
-     * Find the length of the longest substring without a repeating character
-     *  eeeee => 1
-     *  abcabc => 3
-     *  abcabcde => 4
-     * @param s String to check
-     * @return length
+     * Find the length of the longest substring without a repeating character.
+     *
+     *  https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
      */
     public static int longestLengthOfSubstringWithouthRepeatingCharacters(String s) {
         if(s == null || s.length() == 0) {
@@ -47,8 +44,8 @@ public class Main {
 
     /**
      * Find the longest substring of S that is also a palindrome.
-     * @param s
-     * @return substring
+     *
+     * https://leetcode.com/problems/longest-palindromic-substring/description/
      */
     static String longestPalindrome(String s) {
         int n = s.length();
