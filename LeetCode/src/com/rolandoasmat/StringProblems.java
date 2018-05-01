@@ -48,7 +48,7 @@ public class StringProblems {
     /**
      * Find the length of the longest substring without a repeating character.
      *
-     *  https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+     * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
      */
     public static int longestSubstringWithouthRepeatingCharacters(String s) {
         if(s == null || s.length() == 0) {
