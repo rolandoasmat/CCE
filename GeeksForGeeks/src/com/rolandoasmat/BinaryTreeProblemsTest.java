@@ -43,4 +43,29 @@ class BinaryTreeProblemsTest {
 
         assertTrue(problems.isSumTree(root));
     }
+
+    @Test
+    void convertToSumTree() {
+        BinaryTreeProblems.Node root = new BinaryTreeProblems.Node(10);
+
+        root.left = new BinaryTreeProblems.Node(-2);
+        root.right = new BinaryTreeProblems.Node(6);
+
+        root.left.left = new BinaryTreeProblems.Node(8);
+        root.left.right = new BinaryTreeProblems.Node(-4);
+        root.right.left = new BinaryTreeProblems.Node(7);
+        root.right.right = new BinaryTreeProblems.Node(5);
+
+        problems.convertToSumTree(root);
+
+        assertEquals(20, root.data);
+
+        assertEquals(4, root.left.data);
+        assertEquals(12, root.right.data);
+
+        assertEquals(0, root.left.left.data);
+        assertEquals(0, root.left.right.data);
+        assertEquals(0, root.right.left.data);
+        assertEquals(0, root.right.right.data);
+    }
 }

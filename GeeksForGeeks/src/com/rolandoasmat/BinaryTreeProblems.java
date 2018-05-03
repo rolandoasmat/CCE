@@ -54,4 +54,24 @@ public class BinaryTreeProblems {
         return node.left == null && node.right == null;
     }
 
+    /**
+     * Convert a given tree to its Sum Tree
+     *
+     * https://www.geeksforgeeks.org/convert-a-given-tree-to-sum-tree/
+     */
+    public void convertToSumTree(Node node) {
+        convertToSumTreeRecursive(node);
+    }
+    private int convertToSumTreeRecursive(Node node) {
+        if (node == null) {
+            return 0;
+        } else {
+            int leftSum = convertToSumTreeRecursive(node.left);
+            int rightSum = convertToSumTreeRecursive(node.right);
+            int total = leftSum + rightSum;
+            int nodeData = node.data;
+            node.data = total;
+            return nodeData + total;
+        }
+    }
 }
