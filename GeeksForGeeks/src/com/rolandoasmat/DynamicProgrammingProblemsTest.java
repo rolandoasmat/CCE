@@ -43,4 +43,12 @@ class DynamicProgrammingProblemsTest {
 
         return set;
     }
+
+    @Test
+    void containsSumMemoization() {
+        int[] set = {3, 34, 4, 12, 5, 2};
+        int sum = 9;
+
+        solver.containsSumMemoization(set, sum);
+    }
 }
