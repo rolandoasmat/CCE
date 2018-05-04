@@ -68,4 +68,41 @@ class BinaryTreeProblemsTest {
         assertEquals(0, root.right.left.data);
         assertEquals(0, root.right.right.data);
     }
+
+    @Test
+    void sizeOfLargestBSTSubtree() {
+        BinaryTreeProblems.Node root = new BinaryTreeProblems.Node(5);
+
+        root.left = new BinaryTreeProblems.Node(2);
+        root.right = new BinaryTreeProblems.Node(4);
+
+        root.left.left = new BinaryTreeProblems.Node(1);
+        root.left.right = new BinaryTreeProblems.Node(3);
+
+        int actual = problems.sizeOfLargestBSTSubtree(root);
+        assertEquals(3, actual);
+
+        // Another valid tree
+        root = new BinaryTreeProblems.Node(50);
+
+        root.left = new BinaryTreeProblems.Node(30);
+        root.right = new BinaryTreeProblems.Node(60);
+
+        root.left.left = new BinaryTreeProblems.Node(5);
+        root.left.right = new BinaryTreeProblems.Node(20);
+        root.right.left = new BinaryTreeProblems.Node(45);
+        root.right.right = new BinaryTreeProblems.Node(70);
+
+        root.left.left.left = null;
+        root.left.left.right = null;
+        root.left.right.left = null;
+        root.left.right.right = null;
+        root.right.left.left = null;
+        root.right.left.right = null;
+        root.right.right.left = new BinaryTreeProblems.Node(65);
+        root.right.right.right = new BinaryTreeProblems.Node(80);
+
+        actual = problems.sizeOfLargestBSTSubtree(root);
+        assertEquals(5, actual);
+    }
 }

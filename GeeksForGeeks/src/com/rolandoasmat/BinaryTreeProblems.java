@@ -74,4 +74,45 @@ public class BinaryTreeProblems {
             return nodeData + total;
         }
     }
+
+    /**
+     * Find the largest BST subtree in a given Binary Tree
+     *
+     * https://www.geeksforgeeks.org/find-the-largest-subtree-in-a-tree-that-is-also-a-bst/
+     */
+    public int sizeOfLargestBSTSubtree(Node node) {
+        return sizeOfLargestBSTSubtreeRecurse(node).maxSize;
+    }
+    private BSTInfo sizeOfLargestBSTSubtreeRecurse(Node node) {
+        if (node == null) {
+            return  new BSTInfo();
+        } else if (isALeafNode(node)) {
+            BSTInfo info = new BSTInfo();
+            info.isBST = true;
+            info.maxSize = 1;
+            info.minValue = node.data;
+            info.maxValue = node.data;
+            return info;
+        } else {
+            BSTInfo leftInfo = sizeOfLargestBSTSubtreeRecurse(node.left);
+            BSTInfo rightInfo = sizeOfLargestBSTSubtreeRecurse(node.right);
+            BSTInfo info = new BSTInfo();
+            int data = node.data;
+            info.isBST = leftInfo.maxValue < data && data < rightInfo.minValue && leftInfo.isBST && rightInfo.isBST;
+            if (info.isBST) {
+                info.maxSize = leftInfo.maxSize + rightInfo.maxSize + 1;
+            } else {
+                info.maxSize = Math.max(leftInfo.maxSize, rightInfo.maxSize);
+            }
+            info.minValue = Math.min(Math.min(leftInfo.minValue, rightInfo.minValue), data);
+            info.maxValue = Math.max(Math.max(leftInfo.maxValue, rightInfo.maxValue), data);
+            return info;
+        }
+    }
+    static class BSTInfo {
+        boolean isBST = false;
+        int minValue = Integer.MAX_VALUE;
+        int maxValue = Integer.MIN_VALUE;
+        int maxSize = 0;
+    }
 }
