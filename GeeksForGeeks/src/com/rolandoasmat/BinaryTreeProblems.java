@@ -1,6 +1,32 @@
 package com.rolandoasmat;
 
+import java.util.ArrayList;
+
 public class BinaryTreeProblems {
+
+    public static void main(String[] args) {
+        BinaryTreeProblems.Node root = new BinaryTreeProblems.Node(1);
+
+        root.left = new BinaryTreeProblems.Node(2);
+        root.right = new BinaryTreeProblems.Node(3);
+
+        root.left.left = new BinaryTreeProblems.Node(4);
+        root.left.right = new BinaryTreeProblems.Node(5);
+        root.right.left = new BinaryTreeProblems.Node(6);
+        root.right.right = new BinaryTreeProblems.Node(7);
+
+        root.left.left.left = null;
+        root.left.left.right = null;
+        root.left.right.left = null;
+        root.left.right.right = null;
+        root.right.left.left = null;
+        root.right.left.right = new BinaryTreeProblems.Node(8);
+        root.right.right.left = null;
+        root.right.right.right = new BinaryTreeProblems.Node(9);
+
+        BinaryTreeProblems solver = new BinaryTreeProblems();
+        solver.printTreeInVerticalOrder(root);
+    }
 
     static class Node {
         Node left;
@@ -114,5 +140,74 @@ public class BinaryTreeProblems {
         int minValue = Integer.MAX_VALUE;
         int maxValue = Integer.MIN_VALUE;
         int maxSize = 0;
+    }
+
+    /**
+     * Given a binary tree, print it vertically.
+     *
+     * https://www.geeksforgeeks.org/print-binary-tree-vertical-order/
+     */
+    public void printTreeInVerticalOrder(Node node) {
+        DoublyLinkedListNode<ArrayList<Integer>> linkedList = transformTree(node);
+        printDoubleLinkedList(linkedList);
+    }
+    private DoublyLinkedListNode<ArrayList<Integer>> transformTree(Node node) {
+        DoublyLinkedListNode<ArrayList<Integer>> linkedList = new DoublyLinkedListNode<>();
+        transformTree(node, linkedList);
+        return linkedList;
+    }
+
+    private void transformTree(Node node, DoublyLinkedListNode<ArrayList<Integer>> linkedListNode) {
+        if (node == null) {
+            return;
+        }
+        if (linkedListNode.data == null) {
+            linkedListNode.data = new ArrayList<>();
+        }
+
+        ArrayList<Integer> list = linkedListNode.data;
+        list.add(node.data);
+
+        if (linkedListNode.previous == null) {
+            DoublyLinkedListNode<ArrayList<Integer>> newPrevious = new DoublyLinkedListNode<>();
+            linkedListNode.previous = newPrevious;
+            newPrevious.next = linkedListNode;
+        }
+        transformTree(node.left, linkedListNode.previous);
+
+        if (linkedListNode.next == null) {
+            DoublyLinkedListNode<ArrayList<Integer>> newNext = new DoublyLinkedListNode<>();
+            linkedListNode.next = newNext;
+            newNext.previous = linkedListNode;
+        }
+        transformTree(node.right, linkedListNode.next);
+    }
+
+    private DoublyLinkedListNode<ArrayList<Integer>> findDoubleLinkedListHead(DoublyLinkedListNode<ArrayList<Integer>> node) {
+        DoublyLinkedListNode<ArrayList<Integer>> head = node;
+        while (head.previous != null) {
+            head = head.previous;
+        }
+        return head;
+    }
+
+    private void printDoubleLinkedList(DoublyLinkedListNode<ArrayList<Integer>> linkedList) {
+        DoublyLinkedListNode<ArrayList<Integer>> head = findDoubleLinkedListHead(linkedList);
+        while (head != null) {
+            ArrayList<Integer> list = head.data;
+            if (list != null) {
+                for (Integer number : list) {
+                    System.out.print(number + " ");
+                }
+                System.out.println();
+            }
+            head = head.next;
+        }
+    }
+
+    static class DoublyLinkedListNode<T> {
+        DoublyLinkedListNode previous;
+        DoublyLinkedListNode next;
+        T data;
     }
 }
