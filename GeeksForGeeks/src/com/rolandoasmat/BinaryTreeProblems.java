@@ -5,27 +5,9 @@ import java.util.ArrayList;
 public class BinaryTreeProblems {
 
     public static void main(String[] args) {
-        BinaryTreeProblems.Node root = new BinaryTreeProblems.Node(1);
-
-        root.left = new BinaryTreeProblems.Node(2);
-        root.right = new BinaryTreeProblems.Node(3);
-
-        root.left.left = new BinaryTreeProblems.Node(4);
-        root.left.right = new BinaryTreeProblems.Node(5);
-        root.right.left = new BinaryTreeProblems.Node(6);
-        root.right.right = new BinaryTreeProblems.Node(7);
-
-        root.left.left.left = null;
-        root.left.left.right = null;
-        root.left.right.left = null;
-        root.left.right.right = null;
-        root.right.left.left = null;
-        root.right.left.right = new BinaryTreeProblems.Node(8);
-        root.right.right.left = null;
-        root.right.right.right = new BinaryTreeProblems.Node(9);
-
         BinaryTreeProblems solver = new BinaryTreeProblems();
-        solver.printTreeInVerticalOrder(root);
+        solver.printTreeInVerticalOrderTest();
+        solver.printBoundaryTraversalTest();
     }
 
     static class Node {
@@ -146,10 +128,34 @@ public class BinaryTreeProblems {
      * Given a binary tree, print it vertically.
      *
      * https://www.geeksforgeeks.org/print-binary-tree-vertical-order/
+     * https://www.geeksforgeeks.org/print-binary-tree-vertical-order-set-2/
      */
     public void printTreeInVerticalOrder(Node node) {
         DoublyLinkedListNode<ArrayList<Integer>> linkedList = transformTree(node);
         printDoubleLinkedList(linkedList);
+    }
+    public void printTreeInVerticalOrderTest() {
+        BinaryTreeProblems.Node root = new BinaryTreeProblems.Node(1);
+
+        root.left = new BinaryTreeProblems.Node(2);
+        root.right = new BinaryTreeProblems.Node(3);
+
+        root.left.left = new BinaryTreeProblems.Node(4);
+        root.left.right = new BinaryTreeProblems.Node(5);
+        root.right.left = new BinaryTreeProblems.Node(6);
+        root.right.right = new BinaryTreeProblems.Node(7);
+
+        root.left.left.left = null;
+        root.left.left.right = null;
+        root.left.right.left = null;
+        root.left.right.right = null;
+        root.right.left.left = null;
+        root.right.left.right = new BinaryTreeProblems.Node(8);
+        root.right.right.left = null;
+        root.right.right.right = new BinaryTreeProblems.Node(9);
+
+        BinaryTreeProblems solver = new BinaryTreeProblems();
+        solver.printTreeInVerticalOrder(root);
     }
     private DoublyLinkedListNode<ArrayList<Integer>> transformTree(Node node) {
         DoublyLinkedListNode<ArrayList<Integer>> linkedList = new DoublyLinkedListNode<>();
@@ -210,4 +216,60 @@ public class BinaryTreeProblems {
         DoublyLinkedListNode next;
         T data;
     }
+
+    /**
+     * Given a binary tree, print boundary nodes of the binary tree Anti-Clockwise starting from the root
+     *
+     * https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/
+     */
+    public void printBoundaryTraversal(Node node) {
+        printLeftSide(node);
+        printLeafs(node);
+        printRightSide(node);
+    }
+    public void printBoundaryTraversalTest() {
+        BinaryTreeProblems.Node root = new BinaryTreeProblems.Node(20);
+
+        root.left = new BinaryTreeProblems.Node(8);
+        root.right = new BinaryTreeProblems.Node(22);
+
+        root.left.left = new BinaryTreeProblems.Node(4);
+        root.left.right = new BinaryTreeProblems.Node(12);
+        root.right.left = null;
+        root.right.right = new BinaryTreeProblems.Node(25);
+
+        root.left.right.left = new BinaryTreeProblems.Node(10);
+        root.left.right.right = new BinaryTreeProblems.Node(14);
+
+
+        BinaryTreeProblems solver = new BinaryTreeProblems();
+        solver.printBoundaryTraversal(root);
+    }
+    private void printLeftSide(Node node) {
+        if (node != null) {
+            if (!isALeafNode(node)) {
+                System.out.print(node.data+" ");
+                printLeftSide(node.left);
+            }
+        }
+    }
+    private void printLeafs(Node node) {
+        if (node != null) {
+            if (isALeafNode(node)) {
+                System.out.print(node.data+" ");
+            } else {
+                printLeafs(node.left);
+                printLeafs(node.right);
+            }
+        }
+    }
+    private void printRightSide(Node node) {
+        if (node != null) {
+            if (!isALeafNode(node)) {
+                printRightSide(node.right);
+                System.out.print(node.data+" ");
+            }
+        }
+    }
+
 }
