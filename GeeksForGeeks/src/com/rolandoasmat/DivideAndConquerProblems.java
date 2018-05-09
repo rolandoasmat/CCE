@@ -34,7 +34,7 @@ public class DivideAndConquerProblems {
 
         int maxRightSum = Integer.MIN_VALUE;
         int currentRightSum = 0;
-        for (int k = mid; k <= j; k++) {
+        for (int k = mid+1; k <= j; k++) {
             currentRightSum += array[k];
             maxRightSum = Math.max(maxRightSum, currentRightSum);
         }
