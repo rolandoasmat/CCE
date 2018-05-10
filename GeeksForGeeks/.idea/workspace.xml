@@ -12,17 +12,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LRUCache.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/rolandoasmat/LRUCache.java">
+      <file leaf-file-name="MergeSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/rolandoasmat/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
+            <state relative-caret-position="196">
+              <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding>
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
-                <element signature="e#1486#1487#0" expanded="true" />
+                <element signature="e#127#128#0" expanded="true" />
+                <element signature="e#187#188#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MergeSortTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rolandoasmat/MergeSortTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -32,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -56,6 +64,8 @@
         <option value="$PROJECT_DIR$/src/com/rolandoasmat/ArrayProblems.java" />
         <option value="$PROJECT_DIR$/src/com/rolandoasmat/ArrayProblemsTest.java" />
         <option value="$PROJECT_DIR$/src/com/rolandoasmat/LRUCache.java" />
+        <option value="$PROJECT_DIR$/src/com/rolandoasmat/MergeSortTest.java" />
+        <option value="$PROJECT_DIR$/src/com/rolandoasmat/MergeSort.java" />
       </list>
     </option>
   </component>
@@ -165,26 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayProblemsTest.findTwoValuesWithSumClosestToZero">
-    <configuration name="BinaryTreeProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.rolandoasmat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.rolandoasmat.BinaryTreeProblems" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="GeeksForGeeks" />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="JUnit.MergeSortTest.recursiveMergeSort">
     <configuration name="StringProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -279,6 +270,31 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="MergeSortTest.recursiveMergeSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rolandoasmat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="GeeksForGeeks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rolandoasmat" />
+      <option name="MAIN_CLASS_NAME" value="com.rolandoasmat.MergeSortTest" />
+      <option name="METHOD_NAME" value="recursiveMergeSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -295,19 +311,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.BinaryTreeProblems" />
-      <item index="1" class="java.lang.String" itemvalue="Application.StringProblems" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DivideAndConquerProblemsTest.maxSubArraySum" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findNumInRotatedSortedArray" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findTwoValuesWithSumClosestToZero" />
+      <item index="0" class="java.lang.String" itemvalue="Application.StringProblems" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DivideAndConquerProblemsTest.maxSubArraySum" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findNumInRotatedSortedArray" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findTwoValuesWithSumClosestToZero" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MergeSortTest.recursiveMergeSort" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findTwoValuesWithSumClosestToZero" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findNumInRotatedSortedArray" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DivideAndConquerProblemsTest.maxSubArraySum" />
-        <item index="3" class="java.lang.String" itemvalue="Application.StringProblems" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BinaryTreeProblems" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MergeSortTest.recursiveMergeSort" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findTwoValuesWithSumClosestToZero" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayProblemsTest.findNumInRotatedSortedArray" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DivideAndConquerProblemsTest.maxSubArraySum" />
+        <item index="4" class="java.lang.String" itemvalue="Application.StringProblems" />
       </list>
     </recent_temporary>
   </component>
@@ -348,12 +364,6 @@
     <history-entry file="DivideAndConquerProblemsTest_maxSubArraySum - 2018.05.08 at 21h 48m 45s.xml">
       <configuration name="DivideAndConquerProblemsTest.maxSubArraySum" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DynamicProgrammingProblemsTest_containsSum - 2018.05.03 at 20h 57m 42s.xml">
-      <configuration name="DynamicProgrammingProblemsTest.containsSum" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DynamicProgrammingProblemsTest_containsSum - 2018.05.03 at 20h 58m 08s.xml">
-      <configuration name="DynamicProgrammingProblemsTest.containsSum" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DynamicProgrammingProblemsTest_containsSum - 2018.05.03 at 21h 01m 02s.xml">
       <configuration name="DynamicProgrammingProblemsTest.containsSum" configurationId="JUnit" />
     </history-entry>
@@ -362,6 +372,12 @@
     </history-entry>
     <history-entry file="DynamicProgrammingProblemsTest_containsSumMemoization - 2018.05.03 at 21h 48m 53s.xml">
       <configuration name="DynamicProgrammingProblemsTest.containsSumMemoization" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MergeSortTest_recursiveMergeSort - 2018.05.09 at 19h 07m 56s.xml">
+      <configuration name="MergeSortTest.recursiveMergeSort" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MergeSortTest_recursiveMergeSort - 2018.05.09 at 19h 11m 19s.xml">
+      <configuration name="MergeSortTest.recursiveMergeSort" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -376,9 +392,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30306906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30306906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22250639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22250639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -573,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/rolandoasmat/LRUCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
+        <state relative-caret-position="81">
           <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
           <folding>
             <element signature="e#762#763#0" expanded="true" />
@@ -581,6 +597,25 @@
             <element signature="e#1446#1447#0" expanded="true" />
             <element signature="e#1486#1487#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rolandoasmat/MergeSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding>
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rolandoasmat/MergeSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
