@@ -17,6 +17,17 @@ public class Q4_02_Minimal_Tree {
         return transform(a, 0, a.length-1);
     }
     private Node transform(int[] a, int i, int j) {
+        String u = "fsdfasdf";
+        int v = u.length();
+        int[] p = {1, 2, 3};
+
+
+        int[] array = new int[5];
+        int l = array.length;
+        for (int k = 0; k < l; k++) {
+
+        }
+
         if (i <= j) {
             int mid = (i + j)/2;
             Node n = new Node();
@@ -27,5 +38,6 @@ public class Q4_02_Minimal_Tree {
         } else {
             return null;
         }
+
     }
 }
