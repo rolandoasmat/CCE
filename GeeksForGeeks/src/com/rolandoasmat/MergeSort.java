@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class MergeSort {
 
+    /**
+     * Recursive merge sort
+     *
+     * https://www.geeksforgeeks.org/merge-sort/
+     */
     public void recursiveMergeSort(int[] array) {
         recursiveMergeSort(array, 0, array.length-1);
     }
